@@ -1,7 +1,7 @@
 <?php /** @var \App\Doctrine\Entity\TransactionHistory $transactionHistory */ ?>
 <mjml>
     <mj-head>
-        <title>Сессия завершена</title>
+        <title>The session is coming to an end</title>
         <mj-include path="./base/baseHead.blade.php" />
     </mj-head>
     <mj-body background-color="#1E1F27" width="520px">
@@ -12,28 +12,26 @@
                 <mj-group>
                     <mj-column vertical-align="middle">
                         <mj-text css-class="content-title">
-                            <span>Сессия завершена</span>
+                            <span>The session is coming to an end</span>
                         </mj-text>
                         <mj-divider border-width="1px" padding="20px 0" border-color="#EEEEEE" />
                         <mj-text css-class="content-text">
-                            Сессия, на которую вы были подписаны завершена.
+                            We remind you that the session will soon be concluded
                             <br /><br />
-                            Название: <span style="font-weight: 700">Название сессии</span>
+                            Session Name: <span style="font-weight: 700">Session Name</span>
                             <br />
-                            Трейдер: <span style="font-weight: 700">Никнейм трейдера</span>
+                            Exchange: <span style="font-weight: 700">Binance</span>
                             <br />
-                            Биржа: <span style="font-weight: 700">Binance</span>
+                            Trading pairs: <span style="font-weight: 700">BTC/USDT, ETH/USDT</span>
                             <br />
-                            Торговые пары: <span style="font-weight: 700">BTC/USDT, ETH/USDT</span>
-                            <br />
-                            Время завершения: <span style="font-weight: 700">21.10.2021/ 14:15</span>
+                            Date end: <span style="font-weight: 700">21.12.2021/13:00 (UTC)</span>
                             <br /><br />
                         </mj-text>
                         <mj-text align="left" css-class="button">
                             <a
                                 href="{{ route('spa.confirm.withdraw', ['lang' => null,'confirmCode' => $transactionHistory->getWithdrawConfirmationCode()]) }}"
                             >
-                                Перейти к сессии
+                                Go to session
                             </a>
                         </mj-text>
                         <mj-spacer height="20px" />
